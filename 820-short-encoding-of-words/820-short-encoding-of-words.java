@@ -9,10 +9,8 @@ class Solution {
             Map<Character, Object> current = trie;
             boolean found = true;
             
-            System.out.println(word);
             for (int i = wordLength - 1; i >= 0; i--) {
                 Character c = word.charAt(i);
-                System.out.println(c);
                 Map<Character, Object> next = (Map<Character, Object>) current.get(c);
                 if (next == null) {
                     System.out.println("NEXT NULL");
@@ -25,7 +23,6 @@ class Solution {
             }
             
             if (!found) {
-                System.out.println("NOT FOUND");
                 res += wordLength + 1;
             }
         }
